@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Tap</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/app.js"></script>
+    
+
+</head>
+<body>
+    <div class="app">
+        <div class="heading" style="display: flex; justify-content: space-between;">
+            <div class="logo">
+                <img src="../img/logo.PNG" style="width: 150px;" alt="">
+            </div>
+            <div class="heading-title">
+                <h3 style="display: flex; justify-content: center;" >ĐOÀN THANH NIÊN THÀNH PHỐ HỒ CHÍ MINH</h3>
+                <h4 style="color: red">ĐOÀN THANH NIÊN TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</h4>
+            </div>
+        </div>
+
+        <div class="menu">
+            <ul class="menu-list" style="background-color: rgb(133, 234, 234); display: flex; list-style: none;">
+                <li class="menu-item">Trang Chủ</li>
+                <li class="menu-item">Đoàn Thể</li>
+                <li class="menu-item">Sự Kiện</li>
+                <li style="position: relative;"  class="menu-item">
+                    <span>Hoạt Động</span>
+                    <button class="button" style="position: absolute;" data-toggle="modal" data-target="#moModal" id="dangKy">Đăng kí</button>
+                    
+                </li>
+            </ul>
+        </div>
+
+        <div class="content" style="margin-top: 70px; display: flex; justify-content: space-around; ">
+            <img src="../img/ngayhoithanhnien.JPG" style="border-radius: 50%; padding-left: 0%;" alt="">
+            <ol type="1" style="color: darkblue; background-color: aqua; display: block; width: 450px; height: 220px; padding-top: 35px;" class="content-list" >
+                <h4>Tin Noi Bat</h4>
+                <li>mua he xanh</li>
+                <li>thanh nien tinh nguyen </li>
+                <li>tam long vang </li>
+                <li>hien mau tinh nguyen </li>
+                <li>bao ve moi truong </li>
+            </ol>
+        </div>
+
+        <div class="container" style="margin-top: 40px;">
+            <span style="margin-top: 40px; text-align: center;">DANH SÁCH ĐĂNG KÍ TÌNH NGUYỆN MÙA HÈ XANH</span>
+
+            <table class="table">
+                <tr>
+                    <th>STT</th>
+                    <th>Tên Sinh viên</th>
+                    <th>Mã sinh viên</th>
+                    <th>Ngày tham gia</th>                  
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer" style="background-color: rgb(133, 234, 234); padding: 20px; text-align: center;">
+            đoàn thanh niên tình nguyện trường đại học công nghiệp thành phố hồ chí minh
+        </div>
+
+
+        <div class="modal fade" id="moModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 style="text-align: center;">THÔNG TIN ĐĂNG KÝ</h4>
+                        <button class="button" data-dismiss="modal" class="close">X</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <form action="" role="form">
+                            <div id="thongbao"class="text-danger"></div>
+                            <div class="form-group">
+                                <label for="txMa">Mã Sinh viên</label>
+                                <input type="text" id="txMa" class="form-control" placeholder="Mã sinh viên" onblur="ktma()">
+                                <span id="tbMa" class="text-danger">*</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="txMa">Họ Tên</label>
+                                <input type="text" id="txhoten" class="form-control" placeholder="Họ và tên" onblur="kthoten()">
+                                <span id="tbhoten" class="text-danger">*</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="txMa">Ngày tham gia</label>
+                                <input type="date" id="txNgay" class="form-control" onblur="ktngay()">
+                                <span id="tbNgay" class="text-danger">*</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="txMa">Email</label>
+                                <input type="email" id="txEmail" class="form-control" placeholder="Email" onblur="ktEmail()">
+                                <span id="tbEmail" class="text-danger">*</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="txMa">Số điện thoại</label>
+                                <input type="text" id="txsdt" class="form-control" placeholder="sdt" onblur="ktsdt()">
+                                <span id="tbsdt" class="text-danger">*</span>
+                            </div>
+                            
+
+                            <div type="buuton" id="btnluu" class="form-control" style="background-color: red; color: white;" onclick="ketqua()">lưu</div>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
